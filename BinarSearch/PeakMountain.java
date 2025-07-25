@@ -1,6 +1,6 @@
 public class PeakMountain {
     public static void main(String[] args) {
-        int arr[] = {0,2,1,0};
+        int arr[] = {1,2,3,4,5,3,1};
         int ans = BS(arr);
         System.out.println(ans);
     }
@@ -24,7 +24,7 @@ public class PeakMountain {
           }
 
       }
-      return start;
+      return end; // u can return anything either start or end they both are pointing to the same index
     }
     // in the last!-> start == end and pointing to the largest num bc of the two checks
     // start and end always trying to find max element in the above two checks
