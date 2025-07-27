@@ -58,15 +58,4 @@ public class MounTainHard {
         }
         return -1;
     }
-
-    static int CorrectAns(int one, int two) {
-        if (one != -1 && two != -1) {
-            return Math.min(one, two);  // Return the earlier occurrence
-        } else if (one != -1) {
-            return one;
-        } else if (two != -1) {
-            return two;
-        }
-        return -1;
-    }
 }

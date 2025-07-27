@@ -25,4 +25,5 @@ public class BInarySearchCode {
             return -1;
 
     }
+
 }

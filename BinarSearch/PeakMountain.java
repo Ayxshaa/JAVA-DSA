@@ -1,10 +1,10 @@
 public class PeakMountain {
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5,3,1};
-        int ans = BS(arr);
+        int ans = peak(arr);
         System.out.println(ans);
     }
-    static int BS(int arr[]){
+    static int peak(int arr[]){
       int start =0;
       int end = arr.length-1;
 
