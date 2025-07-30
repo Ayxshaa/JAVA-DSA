@@ -24,7 +24,7 @@ public class SearchRotatedArray {
         }
 
     }
-    // will not work in duplicate
+
     static int findPivot(int[] nums){
        int start = 0;
        int end = nums.length-1;
@@ -39,7 +39,7 @@ public class SearchRotatedArray {
            if(mid>start && nums[mid]<nums[mid-1]){
                return mid-1;
            }
-         // if elements at middle, start and emd are equal thn just skip the duplicates
+         // if elements at middle, start and end are equal thn just skip the duplicates
            if (nums[mid] == nums[start] && nums[mid] == nums[end]) {
                // Check if start + 1 is within bounds
                if (start + 1 < nums.length && nums[start] > nums[start + 1]) return start;
