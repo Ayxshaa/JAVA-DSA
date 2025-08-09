@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class SelectionSort {
     public static void main(String[] args) {
-        int arr[] = {3,1,5,4,2};
+        int arr[] = {4 ,1, 3, 9, 7};
         selection(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -17,7 +17,7 @@ public class SelectionSort {
     }
  static int getMaxIndex(int arr[], int start, int end){
         int max = start;
-        for(int i =start; i<end; i++){
+        for(int i =start; i<=end; i++){
             if(arr[max] < arr[i]){
                 max =   i;
             }
