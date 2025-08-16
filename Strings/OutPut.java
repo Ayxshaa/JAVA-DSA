@@ -5,6 +5,9 @@ public class OutPut {
 
         // println calls directly or indirectly -> toString
         System.out.println(56);
+        // so bydeault in the end it uses wrapper classes and toString
+        Integer n = 45;
+        System.out.println(n.toString());
         System.out.println("Kunal");
         // the objects can be of any type
         //System.out.println(new int[]{1,2,3,4}); // -> this will print the [I@7b23ec81
