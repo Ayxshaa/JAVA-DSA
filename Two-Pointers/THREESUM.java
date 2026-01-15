@@ -1,0 +1,44 @@
+import java.util.*;
+
+public class THREESUM{
+    public static void main(String[] args) {
+        int[] arr = {-1, -1, 0, 1, 2, 4};
+
+        List<List<Integer>> result = createArray(arr);
+        System.out.println(result);
+    }
+
+    public static List<List<Integer>> createArray(int[] arr) {
+        List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(arr);
+
+        for (int i = 0; i < arr.length - 2; i++) {
+
+            // skip duplicate i
+            if (i > 0 && arr[i] == arr[i - 1]) continue;
+
+            int left = i + 1;
+            int right = arr.length - 1;
+
+            while (left < right) {
+                int sum = arr[i] + arr[left] + arr[right];
+
+                if (sum == 0) {
+                    result.add(Arrays.asList(arr[i], arr[left], arr[right]));
+
+                    // skip duplicates
+                    while (left < right && arr[left] == arr[left + 1]) left++;
+                    while (left < right && arr[right] == arr[right - 1]) right--;
+
+                    left++;
+                    right--;
+                } else if (sum < 0) {
+                    left++;
+                } else {
+                    right--;
+                }
+            }
+        }
+        return result;
+    }
+}
